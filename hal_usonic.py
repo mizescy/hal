@@ -39,6 +39,6 @@ def get_distance():
 
 
 
-while (True):
-    print("Measured distance = {0:0.1f} cm".format(get_distance()))
-    time.sleep(1)
+#while (True):
+#    print("Measured distance = {0:0.1f} cm".format(get_distance()))
+#    time.sleep(1)
