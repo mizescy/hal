@@ -2,7 +2,7 @@ import time
 
 import RPi.GPIO as GPIO
 
-import dht11
+from . import dht11
 
 def init():
     global dht11_inst
