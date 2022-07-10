@@ -130,8 +130,8 @@ class MFRC522:
   def __init__(self, dev='/dev/spidev0.1', spd=1000000):
     global spidev
     spidev = spi.openSPI(device=dev,speed=spd)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(self.NRSTPD, GPIO.OUT)
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(17, GPIO.OUT)
     #GPIO.output(self.NRSTPD, 1)
     self.MFRC522_Init()
 
@@ -402,7 +402,7 @@ class MFRC522:
         i = i+1
 
   def MFRC522_Init(self):
-    GPIO.output(self.NRSTPD, 1)
+    GPIO.output(17, 1)
 
     self.MFRC522_Reset();
 
@@ -503,3 +503,9 @@ class SimpleMFRC522:
         for i in range(0, 5):
             n = n * 256 + uid[i]
         return n
+
+
+def init():
+    rfid_reader = SimpleMFRC522()
+
+    return rfid_reader
