@@ -5,6 +5,7 @@ import RPi.GPIO as GPIO
 from . import dht11
 
 def init():
+    GPIO.setmode(GPIO.BCM)
     global dht11_inst
 
     dht11_inst = dht11.DHT11(pin=21)  # read data using pin 21
