@@ -4,7 +4,7 @@ import configparser
 import math
 
 
-CALIB_FILE = 'hal\accel_calib.txt'
+CALIB_FILE = 'hal/accel_calib.txt'
 
 class Regis(object):
 
