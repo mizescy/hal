@@ -131,7 +131,7 @@ class MFRC522:
     global spidev
     spidev = spi.openSPI(device=dev,speed=spd)
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(17, GPIO.OUT)
+    #GPIO.setup(17, GPIO.OUT)
     #GPIO.output(self.NRSTPD, 1)
     self.MFRC522_Init()
 
@@ -403,7 +403,7 @@ class MFRC522:
         i = i+1
 
   def MFRC522_Init(self):
-    GPIO.output(17, 1)
+    #GPIO.output(17, 1)
 
     self.MFRC522_Reset();
 
